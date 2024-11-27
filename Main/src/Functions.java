@@ -1,9 +1,77 @@
 
 import java.util.*;
 class Functions{
+    public static int sum(int a, int b){
+        return a+b;
 
-    // public static void main(String[] args) {
-    //     Scanner scanner = new Scanner(System.in);
+    }
+    public static float sum(float a, float b){
+        return a+b;
+
+    }
+
+    public static void main (String[]args){
+        // System.out.println(sum(2, 5));
+        System.out.println(sum(2.5f, 5));
+    }
+
+}
+    // public static int printSum(int x, int y){
+    //     return x+y;
+
+    // }
+    // public static int printSum(int x, int y, int z){
+    //     return x+y+z;
+
+    // }
+    // public static void main(String[]args){
+    //     System.out.println(printSum(1,2,3));
+    //     }}
+    // public static int printFactorial(int n){
+    //     int fact = 1;
+    //     for(int i = 1; i <= n; i++){
+    //         fact = fact * i;
+    //     }
+    //     return fact;
+    // }
+    // public static int bicoe(int n , int r){
+    //     int fact_n = printFactorial(n);
+    //     int fact_r = printFactorial(r);
+    //     int fact_nmr = printFactorial(n-r);
+
+    //     int bicoe = fact_n / fact_r * fact_nmr;
+
+    //     return bicoe;
+    // }
+    // public static void main(String[]args){
+    //     Scanner sc = new Scanner(System.in);
+    //     int n = sc.nextInt();
+    //     // int r = sc.nextInt();
+    //    System.out.println(bicoe(n, r));
+    // }
+    // }
+//     public static void printSwap(int a, int b){
+//         int temp = a;
+//         a = b;
+//         b = temp;
+        
+        
+    
+
+//     }
+//     public static void main(String[]args){
+//         Scanner sc = new Scanner(System.in);
+//         int a = sc.nextInt();
+//         int b = sc.nextInt();
+//         printSwap(a, b);
+//         System.out.println(a);
+//         System.out.println(b);
+ 
+//     }
+// }
+
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
 
 //         System.out.print("Input the first number: ");
 //         int num1 = scanner.nextInt();
@@ -34,30 +102,53 @@ class Functions{
 //     }
 // }
 
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         int a = sc.nextInt();
+//         int b = sc.nextInt();
+//         int c = sc.nextInt();
+
+//         int smallest = satyajit(a, b, c);
+//         System.out.print(smallest);
+//     }
+
+//     public static int satyajit(int a, int b, int c) {
+//         int smallest = a;
+
+//         if (b < smallest) {
+//             smallest = b;
+//         }
+//         if (c < smallest) {
+//             smallest = c;
+//         }
+//         return smallest;
+//     }
+// }
 
 
 
-    public static void oddYaEven(int n){
+    // public static void oddYaEven(int n){
         
-        if(n % 2 == 0){
-            System.out.println("Even");
-        }
-        else{
-            System.out.println("ODD");
-        }
+    //     if(n % 2 == 0){
+    //         System.out.println("Even");
+    //     }
+    //     else{
+    //         System.out.println("ODD");
+    //     }
     
-    return;
-    }
+    // return;
+    // }
 
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+    // public static void main(String[] args){
+    //     Scanner sc = new Scanner(System.in);
+    //     int n = sc.nextInt();
 
-        oddYaEven(n);
-    }
+    //     oddYaEven(n);
+    // }
 
 
-    }       
+    // }       
     // public static void calSumOdd(int n){
     //     int sum = 0;
     //     for(int i = 1; i <=n; i++) {
