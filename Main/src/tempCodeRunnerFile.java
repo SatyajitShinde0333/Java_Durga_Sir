@@ -1,1 +1,1 @@
-System.out.println();
+endcol = matrix[0].length - 1

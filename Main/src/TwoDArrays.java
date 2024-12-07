@@ -1,69 +1,73 @@
-import java.util.*;
+public class TwoDArrays {
+    // public static void spiralMatrix(int matrix[][]) {
+    //     if (matrix.length == 0) return; // Handle empty matrix
 
-class TwoDArrays{
+    //     int startRow = 0;
+    //     int endRow = matrix.length - 1;
+    //     int startCol = 0;
+    //     int endCol = matrix[0].length - 1;
 
-
-    public static void main(String[]args){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter no. of Rows:");
-        int row = sc.nextInt();
-
-        System.out.println("Enter number of Coloumns:");
-        int col = sc.nextInt();
-
-        
-        int findX [][] = new int[row][col];
-        System.out.println("Entr Elements of Rows & Cols:");
-        for(int i=0; i<row; i++){
-            for(int j=0; j<col; j++){
-                findX[i][j]=sc.nextInt();
-            }
-        }
-        
-        System.out.println("Enter X Element to Findout:");
-        int x = sc.nextInt();
-        for(int i=0; i<row; i++){
-            for(int j=0; j<col; j++){
-
-                if(findX[i][j] == x){
-                    System.out.println("X is Found At(" + i + ", " + j + ")");
-                }
-            }
-        }
-
-
-
-
-
-
-      // 2D array for print matrix
-    // public static void main(String[]args){
-    //     Scanner sc = new Scanner(System.in);
-        
-    //     int row = sc.nextInt();
-        
-    //     int col = sc.nextInt();
-
-    //     int twoD[][] = new int [row][col];
-
-    //     //input rows
-    //     for(int i=0; i<row; i++) {
-    //         //input coloumns
-    //             for(int j=0; j<col; j++) {                  
-    //                 twoD[i][j] = sc.nextInt();
-    //             }
-                
-    //     }
-
-    //     // output rows
-    //     for(int i=0; i<row; i++){
-    //         //output coloumns
-    //         for(int j=0; j<col; j++){
-    //             System.out.print(twoD[i][j] + " ");
-
+    //     while (startRow <= endRow && startCol <= endCol) {
+    //         // Traverse from left to right
+    //         for (int j = startCol; j <= endCol; j++) {
+    //             System.out.print(matrix[startRow][j] + " ");
     //         }
-    //         System.out.println();
-    //     }
+    //         startRow++;
 
+    //         // Traverse from top to bottom
+    //         for (int i = startRow; i <= endRow; i++) {
+    //             System.out.print(matrix[i][endCol] + " ");
+    //         }
+    //         endCol--;
+
+    //         // Traverse from right to left
+    //         if (startRow <= endRow) {
+    //             for (int j = endCol; j >= startCol; j--) {
+    //                 System.out.print(matrix[endRow][j] + " ");
+    //             }
+    //             endRow--;
+    //         }
+
+    //         // Traverse from bottom to top
+    //         if (startCol <= endCol) {
+    //             for (int i = endRow; i >= startRow; i--) {
+    //                 System.out.print(matrix[i][startCol] + " ");
+    //             }
+    //             startCol++;
+    //         }
+    //     }
+    // }
+
+    // diagonal sum
+
+    public static int diagonalSum(int[][] matrix) {
+        int sum = 0;
+        for(int i=0; i<matrix.length; i++){
+            for(int j=0; j<matrix[0].length;j++){
+                if(i==j){
+                    sum += matrix[i][j];
+                }
+                else if(i+j == matrix.length-1){
+                    sum += matrix[i][j];
+                    }
+            }
+            
+            }return sum;
+   
     }
-}   
+    public static void main(String[] args) {
+        int[][] matrix = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16},
+            
+        };
+        //spiralMatrix(matrix);
+        int sum = diagonalSum(matrix);
+        System.out.println("Sum of diagonal elements: " + sum);
+    }
+}
+
+
+   
