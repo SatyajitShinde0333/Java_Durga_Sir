@@ -1,1 +1,1 @@
-endcol = matrix[0].length - 1
+str 

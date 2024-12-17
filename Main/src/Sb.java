@@ -1,23 +1,82 @@
 import java.util.*;
 
 class Sb {
-    public static void main(String[] args){
-        StringBuilder name = new StringBuilder("Isha");
 
-        for(int i=0; i < name.length()/2; i++){
-            int front = i;
-            int back = name.length() - 1 - i;
+    public static String compress(String str){
+        String newStr = "";
+        
+        for(int i = 0; i < str.length(); i++){
+            Integer count = 1;
+            while(i < str.length() - 1 && str.charAt(i) == str.charAt(i + 1)){
+                count++;
+                i++;
+            }
+            newStr += str.charAt(i);
+            if(count > 1){
+                newStr += count.toString();
+            }
+            
+            }
+            return newStr;
+    }
 
-            char frontchar = name.charAt(front);
-            char backchar = name.charAt(back);
 
-            name.setCharAt(back, frontchar);
-            name.setCharAt(front, backchar);
+    
+    public static void main(String[] args) {
+        String str = "aaabbcccddddd";
+        System.out.println(compress(str));
+    }
+}
+//     //Upper case first letter of sentance
+//     public static String toUpperCase(String str){
+//         StringBuilder sb = new StringBuilder("");
+//         char ch = Character.toUpperCase(str.charAt(0));
+//         sb.append(ch);
+//         for(int i=1;i<str.length();i++){
+//             if(str.charAt(i) == ' ' && i<str.length()-1){
+//                 sb.append(str.charAt(i));
+//                 i++;
+//                 sb.append(Character.toUpperCase(str.charAt(i)));
+//             }else{
+//                 sb.append(str.charAt(i));
+//             }
+//     }return sb.toString();
+// }
+//     public static void main(String[] args){
+//         String str = "hello, i am satyajit and im from pune";
+//         System.out.println(toUpperCase(str));
+
+//     }
+// }
+    //     //Append
+    // public static void main(String[] args) {
+    //     StringBuilder sb = new StringBuilder("");
+
+    //     for(char ch='a'; ch<='z';ch++){
+    //         sb.append(ch);
+    //     }
+    //     System.out.println(sb);
+
+    // }
 
 
-        }
+    // public static void main(String[] args){
+    //     StringBuilder name = new StringBuilder("Isha");
 
-        System.out.println(name);
+    //     for(int i=0; i < name.length()/2; i++){
+    //         int front = i;
+    //         int back = name.length() - 1 - i;
+
+    //         char frontchar = name.charAt(front);
+    //         char backchar = name.charAt(back);
+
+    //         name.setCharAt(back, frontchar);
+    //         name.setCharAt(front, backchar);
+
+
+    //     }
+
+    //     System.out.println(name);
 
 
 
@@ -46,7 +105,7 @@ class Sb {
 
 
 
-    }
+    // }
 
 
 
@@ -93,4 +152,4 @@ class Sb {
 
 
     // }
-}
+

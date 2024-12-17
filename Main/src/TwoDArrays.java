@@ -38,22 +38,35 @@ public class TwoDArrays {
     //     }
     // }
 
-    // diagonal sum
+    // // diagonal sum.......
 
-    public static int diagonalSum(int[][] matrix) {
-        int sum = 0;
-        for(int i=0; i<matrix.length; i++){
-            for(int j=0; j<matrix[0].length;j++){
-                if(i==j){
-                    sum += matrix[i][j];
-                }
-                else if(i+j == matrix.length-1){
-                    sum += matrix[i][j];
-                    }
-            }
+    // public static int diagonalSum(int[][] matrix) {
+    //     int sum = 0;
+    //     for(int i=0; i<matrix.length; i++){
+    //         for(int j=0; j<matrix[0].length;j++){
+    //             if(i==j){
+    //                 sum += matrix[i][j];
+    //             }
+    //             else if(i+j == matrix.length-1){
+    //                 sum += matrix[i][j];
+    //                 }
+    //         }
             
-            }return sum;
+    //         }return sum;
    
+    // }
+// Optimize Way
+    public static int diagonalSumOpti(int matrix[][]){
+        int sum = 0;
+        
+        for(int i=0; i<matrix.length; i++){
+
+            sum += matrix[i][i];
+            if(i != matrix.length-1-i){
+                sum += matrix[i][matrix.length-1-i];
+            }
+
+        }return sum;
     }
     public static void main(String[] args) {
         int[][] matrix = {
@@ -64,7 +77,7 @@ public class TwoDArrays {
             
         };
         //spiralMatrix(matrix);
-        int sum = diagonalSum(matrix);
+        int sum = diagonalSumOpti(matrix);
         System.out.println("Sum of diagonal elements: " + sum);
     }
 }
