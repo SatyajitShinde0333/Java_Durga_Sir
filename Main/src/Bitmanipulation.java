@@ -36,8 +36,36 @@ class Bitmanipulation{
         int bitmask = newBit << i;
         return n|bitmask;
     }
+            //Clear i th Bits any ith bits 
+    public static int clearLastIth(int n, int i){
+        int bitmask= (-1)<<i; //also use ~(0)
+        return n & bitmask;
+    }
+    // in Range cleaar Bit 
+    public static int clearRangeinBit(int n, int i, int j){
+        int  a = (~0)<<(j+1);
+        int b = (1<<i)-1;
+        int bitmask = a | b;
+
+        return n & bitmask;
+    }
+
+    // number is 2 power is not yes 
+    public static boolean checkPower(int n){
+        return (n & (n-1)) == 0;
+    }
+    // Count Set number in Bit
+    public static int countSetBits(int n){
+        int count = 0;
+        while(n > 0){
+            if((n & 1) != 0){
+                count++;
+            }
+            n = n >> 1;
+        }return count;
+    }
     public static void main(String[] args){
-        System.out.println(update(10, 2, 0));
+        System.out.println(countSetBits(15));
     }
     }
     // public static void oddEven(int n){
