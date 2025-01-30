@@ -18,10 +18,29 @@ public class Backtracking{
             System.out.print(arr[i] + " ");
         } System.out.println(" ");
     }
+
+
+    public static void findSub(String str, int i, String ans){
+        //base case
+        if (i==str.length()){
+            if(ans.length() == 0){
+                System.out.println("Null");
+            }else{
+                 System.out.println(ans);
+
+            }
+           
+            return;
+        }
+        //recursion for yes
+        findSub(str, i+1, ans+str.charAt(i));
+        //recursion for no
+        findSub(str, i+1, ans);
+    }
     public static void main(String[] args){
+        String str = "abc";
         int arr[] = new int[5];
-        changeArr(arr, 0, 1);
-        printarr(arr);
+        findSub(str, 0, "");
 
     }
 }
