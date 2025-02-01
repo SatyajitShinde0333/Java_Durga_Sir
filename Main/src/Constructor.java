@@ -11,7 +11,7 @@ class Constructor{
 class Student{
     String name;
     int age;
-    int roll;
+        int roll;
 
     public void Student(String name, int age, int roll){
         this.name = name;
