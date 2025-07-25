@@ -3,7 +3,7 @@
 
 - [Identifiers](#1-identifiers)
 - [Reserved Words](#2-reserved-word) 
-- [Data Types](#basic-concepts)
+- [Data Types](#3-data-types)
 - [Literals](#advanced-topics)
 - [Types of Variables](#contributing)
 - [Var - Arg Methods](#contributing)
@@ -128,8 +128,8 @@ class Test{
   - `package`
   - `import`
 
-  ### Object relatyed Keywords
-  -`new`
+  ### Object related Keywords
+  - `new`
   - `instenceof`
   - `super`
   - `this`
@@ -197,3 +197,28 @@ which of the following java reserved words
 >main
 >String
 >args
+
+
+## 3. Data Types
+
+In java every variable & expression has some type.
+Each an every data type is clearly defined.
+Every assignment by check by compiler for Type Compatibility
+Because of above reason we can canclude java language is **Strongly Typed**
+Java is not consider as pure object orineted language beacause several not satisfyed by java like operated overloading & multimulple inheritence
+we're depends on premitive data type which non objects.
+
+![alt text](image.png)
+
+> Expect boolean & char remaining data type as signed data types beacause we can represent both +ve & -ve Numbers.
+
+- `byte` - Size 1byte(8 bits) 
+              max_value (127)
+              max_value (-127)
+              range (-127 to 127)
+              ![alt text](image-1.png)  
+
+                                                                                                                                              
+
+
+
