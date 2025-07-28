@@ -218,7 +218,69 @@ we're depends on premitive data type which non objects.
               range (-127 to 127)
               ![alt text](image-1.png)  
 
-                                                                                                                                              
+      > `Erorr's` - <pre> byte b = 10; 
+                      byte b=128; # Compitable Erorr: possibleloss of precision
+                      byte b =10.5 #Compile time error: possibleloss of precision
+                                  # found : double
+                                  #required :byte
+                      byte b = true; #found : boolean
+                      byte b = "Satyajit" #found : java.util.String
+  </pre>
+
+  > Byte u=is best choice i you want to handel data in terms of streams either form file or form the network (file supported or network supported file in byte).
 
 
+
+- `short` - size : 2bytes (16bits)
+            Range : -2^-15 to 2^15 -1 (-32768 to 32767)
+
+  > This is most rarely used in java
+
+
+  > `Error` - <pre> short s=32767;
+                    short s =32768; found:int
+                    short s =10.2; found:double
+                    short s =10.2; found:boolean
+  
+  </pre>
+
+- `int` - IT's most useable data type in java.
+            Size - 4bytes (32bits)
+            Range - 2^31 to 2^31 -1 (-2147483648 to 2147483647)
+
+    > `Erorr` - <pre> int x = 2147483647;
+                        int x = 2147483648; found : integer num too long
+                        int x = 214748364L; Found: Long
+                        int x = true; Found: boolean                   
+    </pre>                                                                                                                                    
+
+- `long` - Sometimes int may not enough hold to big values then we should go fo long type.
+            Ex. 1 - The amount of distance 1000 times to hold of this value so we go with long Datatype.
+            long l = 126000 * 60 * 60 *60 *1000
+            Ex. 2 - the of cahracters present big file may exced int range hence the retrun of length method is long but not int
+            long l = f.length();
+    > Size : 8Bytes (64bits)
+    > Range: -2^63 to 2^63 -1 
+
+    > Note : This data type only represent integral ` byte, short, long, int` if we want floating point values then we should going for floating point data types.
+
+-  `float` and `double`
+
+| Aspect              | float                                 | double                                 |
+|---------------------|----------------------------------------|----------------------------------------|
+| Precision           | 7 decimal digits single Precision                      | 15–16 decimal digits double Precision                  |
+| Size                | 4 bytes                               | 8 bytes                                |
+| Range               | ~ ±3.4×10<sup>38</sup>                | ~ ±1.7×10<sup>308</sup>               |
+| Default Type        | Not default for decimals              | Default for decimal values             |
+| Storage & Speed     | Requires less memory, faster          | Requires more memory, slightly slower  |
+| Use Case            | When memory is limited                | When higher precision is needed        |
+| Example Declaration | `float price = 5.75f;`                | `double value = 5.75;`                 |
+
+- `true` and `false` - Size : Not applicable
+                      Range: Not applicable
+  > `Error` - <pre> boolean b = true;
+                    boolean b = 0; #Found int
+                    boolean b = True; #cannot find symbol Symbol. Symbol: true
+                    boolean b = "true"; #found : java.lang.string
+  </pre>
 
