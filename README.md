@@ -284,3 +284,23 @@ we're depends on premitive data type which non objects.
                     boolean b = "true"; #found : java.lang.string
   </pre>
 
+- `char` - Size: 2bytes (16bits)
+            Range : 0 t0 65535
+  > Old lang are ascii code based and number of allowed diff are <=256 to represent this 256 cahracters are enough the size of cahr in old lang is 1Byte.
+  >But java is Unicode based and the number of Diff Unicode are characters > 256 and less equal 65536 to represt this many characters 8 bits may not enough complasory we go for 16bits.
+  >hence the size of char in Java 2bytes
+
+### `Summary Of Primitive Datatype:`
+
+| Data Type | Size      | Range                                      | Wrapper Class | Default Value |
+|-----------|-----------|---------------------------------------------|----------------|----------------|
+| byte      | 1 byte    | -128 to 127                                | Byte           | 0              |
+| short     | 2 bytes   | -32,768 to 32,767                          | Short          | 0              |
+| int       | 4 bytes   | -2³¹ to 2³¹–1                              | Integer        | 0              |
+| long      | 8 bytes   | -2⁶³ to 2⁶³–1                              | Long           | 0L             |
+| float     | 4 bytes   | ~±3.4×10³⁸ (7 decimal digits)              | Float          | 0.0f           |
+| double    | 8 bytes   | ~±1.7×10³⁰⁸ (15–16 decimal digits)         | Double         | 0.0d           |
+| char      | 2 bytes   | '\u0000' to '\uffff' (0 to 65,535)         | Character      | '0000'(represent Zero a space)      |
+| boolean   | NA    | true or false                              | Boolean        | false          |
+> `null` is deafault value for object ref we can not apply for premitive if we're use for Primitive get compile time error.
+> eg: char c = null; found null
